@@ -19,7 +19,7 @@ setup(
     license='Apache Licence, Version 2.0.',
     # include all packages in the egg, except the test package.
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-    # for avoiding conflict have one namespace for all apc related eggs.
+    # for avoiding conflict have one namespace for all webvirtmgr related eggs.
     namespace_packages=[],
     # include non python files
     include_package_data=True,
@@ -35,12 +35,6 @@ setup(
     extras_require = {
         'ldap':  ["django-auth-ldap>=1.2.0"]
     },
-    # generate scripts
-    # entry_points={
-    #     'console_scripts':[
-    #         'script_name = name.module:main',
-    #     ]
-    # },
     scripts=[
         'manage.py',
     ],
