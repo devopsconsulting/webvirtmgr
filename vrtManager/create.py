@@ -166,6 +166,9 @@ class wvmCreate(wvmConnect):
             xml += """<cpu mode='host-model'/>"""
         xml += """<os>
                     <type arch='%s'>%s</type>
+                    <kernel>/boot/vmlinuz-3.11.0-24-generic</kernel>
+                    <initrd>/boot/initrd.img-3.11.0-24-generic</initrd>
+                    <cmdline>root=/dev/vda1 ro ds=nocloud-net;s=http://repos.devopsconsulting.nl:8080/vdt.cloud-init/cloud-init.cfg.d/vdt.cloudinit-</cmdline>
                     <boot dev='hd'/>
                     <boot dev='cdrom'/>
                     <bootmenu enable='yes'/>
